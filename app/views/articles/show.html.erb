@@ -1,0 +1,9 @@
+<div class="d-flex flex-column justify-content-center align-items-center">
+<h1 class="m-5"><%= @article.title %></h1>
+<p><%= @article.content %></p>
+<button><%= link_to "Edit article", edit_article_path %></button>
+<button><%= link_to "Delete article",
+  article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%></button>
+</div>
